@@ -23,7 +23,8 @@ public class TestController {
 
     private final ApplicationContext applicationContext;
     private final Environment        env;
-    @MotanReferer(directUrl = "127.0.0.1:26010")
+    //    @MotanReferer(directUrl = "127.0.0.1:23010")
+    @MotanReferer
     private       AppService         appService;
 
     public TestController(ApplicationContext applicationContext, Environment env) {
