@@ -45,7 +45,7 @@ public class MotanConfiguration {
         config.setModule("default-module");
         config.setGroup("default-group");
         config.setRegistry("registryConfig1");
-        config.setExport("demoMotan:8002");
+        config.setExport("demoMotan:23010");
         config.setAccessLog(false);
         config.setShareChannel(true);
         return config;
