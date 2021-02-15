@@ -106,18 +106,6 @@ logging:
     level:
         root: DEBUG
         ${info.project.package}: DEBUG
-infinity:
-    application:
-        id: ${info.artifact.id}
-        name: ${info.artifact.name}
-        description: RPC Demo Server
-        team: Infinity Team
-        ownerMail: pm6422@126.com
-        env: ${spring.profiles.active}
-    registry:
-        name: zookeeper
-        connectTimeout: 1000
-        sessionTimeout: 60000
 # ===================================================================
 # Application specific properties
 # ===================================================================

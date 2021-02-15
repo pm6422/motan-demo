@@ -4,11 +4,15 @@ import com.weibo.api.motan.config.springsupport.AnnotationBean;
 import com.weibo.api.motan.config.springsupport.BasicServiceConfigBean;
 import com.weibo.api.motan.config.springsupport.ProtocolConfigBean;
 import com.weibo.api.motan.config.springsupport.RegistryConfigBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class MotanConfiguration {
+    @Value("${spring.application.name}")
+    private String applicationName;
+
     @Bean
     public AnnotationBean motanAnnotationBean() {
         AnnotationBean motanAnnotationBean = new AnnotationBean();
@@ -37,9 +41,9 @@ public class MotanConfiguration {
     @Bean
     public BasicServiceConfigBean baseServiceConfig() {
         BasicServiceConfigBean config = new BasicServiceConfigBean();
-        config.setApplication("myMotanDemo");
-        config.setModule("motan-demo-rpc");
-        config.setGroup("motan-demo-rpc");
+        config.setApplication(applicationName);
+        config.setModule("default-module");
+        config.setGroup("default-group");
         config.setRegistry("registryConfig1");
         config.setExport("demoMotan:8002");
         config.setAccessLog(false);
