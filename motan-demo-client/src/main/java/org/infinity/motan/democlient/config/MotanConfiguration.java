@@ -50,7 +50,7 @@ public class MotanConfiguration {
         config.setProtocol("demoMotan");
         config.setCheck(false);
         config.setAccessLog(true);
-        config.setRetries(2);
+        config.setRetries(0);
         config.setThrowException(true);
         return config;
     }
