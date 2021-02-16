@@ -43,7 +43,7 @@
         </dependency>
         <dependency>
             <groupId>com.weibo</groupId>
-            <artifactId>motan-transport-netty</artifactId>
+            <artifactId>motan-transport-netty4</artifactId>
             <version>${motan.version}</version>
         </dependency>
         <dependency>
