@@ -81,6 +81,11 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.7.Final</version>
+        </dependency>
+        <dependency>
             <groupId>org.infinity</groupId>
             <artifactId>motan-demo-common</artifactId>
             <version>1.0.0</version>
@@ -115,11 +120,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.validator</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>6.1.7.Final</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -160,8 +160,8 @@
                     <groupId>org.slf4j</groupId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.apiguardian</groupId>
                     <artifactId>apiguardian-api</artifactId>
+                    <groupId>org.apiguardian</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
