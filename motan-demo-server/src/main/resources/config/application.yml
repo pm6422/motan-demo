@@ -53,7 +53,7 @@ info: # These configuration can be exported to Environment, accessing URL /info 
         name: @project.name@
         version: @project.version@
     project:
-        package: org.infinity.rpc.demoserver
+        package: org.infinity.motan.demoserver
 spring:
     application:
         name: ${info.artifact.name}
