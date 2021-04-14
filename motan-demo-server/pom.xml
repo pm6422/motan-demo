@@ -11,7 +11,7 @@
     <artifactId>motan-demo-server</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
-    <name>motan-demo-server</name>
+    <name>${project.artifactId}</name>
 
     <!--
         *************************************************************************************
