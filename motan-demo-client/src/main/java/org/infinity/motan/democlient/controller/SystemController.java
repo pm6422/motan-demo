@@ -1,7 +1,7 @@
 package org.infinity.motan.democlient.controller;
 
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiOperation;
 import org.infinity.motan.democlient.utils.NetworkUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.ResponseEntity;
@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 @RestController
 @Api(tags = "系统")
 public class SystemController {
 
-    private final ApplicationContext applicationContext;
+    @Resource
+    private ApplicationContext applicationContext;
 
-    public SystemController(ApplicationContext applicationContext) {
-        this.applicationContext = applicationContext;
-    }
-
+    @ApiOperation("get bean")
     @GetMapping("/api/system/bean")
-    public ResponseEntity<Object> getBean(@ApiParam(value = "bean名称", required = true) @RequestParam(value = "name") String name) {
+    public ResponseEntity<Object> getBean(@RequestParam(value = "name") String name) {
         return ResponseEntity.ok(applicationContext.getBean(name));
     }
 
