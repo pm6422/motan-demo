@@ -33,7 +33,7 @@ public class AdminMenuController {
 
     @ApiOperation("检索所有菜单")
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "成功获取")})
-    @GetMapping("/api/admin-menu/menus")
+    @GetMapping("/api/admin-menus")
     public ResponseEntity<List<AdminMenuTreeDTO>> find() {
         List<AdminMenuTreeDTO> results = adminMenuService.getMenus();
         return ResponseEntity.ok(results);
