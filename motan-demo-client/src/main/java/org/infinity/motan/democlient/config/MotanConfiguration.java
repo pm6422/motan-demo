@@ -32,10 +32,10 @@ public class MotanConfiguration {
     @Bean(name = "registry")
     public RegistryConfigBean registryConfig() {
         RegistryConfigBean config = new RegistryConfigBean();
-        config.setRegProtocol("direct");
-        config.setAddress("127.0.0.1:23010");
-//        config.setRegProtocol("zookeeper");
-//        config.setAddress("127.0.0.1:2181");
+//        config.setRegProtocol("direct");
+//        config.setAddress("127.0.0.1:23010");
+        config.setRegProtocol("zookeeper");
+        config.setAddress("127.0.0.1:2181");
         config.setConnectTimeout(2000);
         return config;
     }
