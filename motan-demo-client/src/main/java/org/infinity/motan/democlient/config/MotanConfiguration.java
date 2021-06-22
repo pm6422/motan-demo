@@ -52,6 +52,7 @@ public class MotanConfiguration {
         config.setAccessLog(true);
         config.setRetries(0);
         config.setThrowException(true);
+        config.setFilter("statistic");
         return config;
     }
 }

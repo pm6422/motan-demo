@@ -1,6 +1,8 @@
 package org.infinity.motan.democlient.controller;
 
 import com.weibo.api.motan.config.springsupport.annotation.MotanReferer;
+import com.weibo.api.motan.util.AccessStatisticResult;
+import com.weibo.api.motan.util.StatsUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.concurrent.ConcurrentMap;
 
 @RestController
 @Api(tags = "测试")
@@ -38,5 +41,11 @@ public class TestController {
         Pageable pageable = PageRequest.of(0, 10);
         Page<App> all = appService.findAll(pageable);
         return all.getContent();
+    }
+
+    @ApiOperation("访问统计")
+    @GetMapping("/api/test/statistics")
+    public ConcurrentMap<String, AccessStatisticResult> statistics() {
+        return StatsUtil.getTotalAccessStatistic();
     }
 }
